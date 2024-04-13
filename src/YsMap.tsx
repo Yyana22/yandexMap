@@ -3,7 +3,6 @@ import { type FC } from 'react'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Map, ZoomControl, withYMaps } from '@pbe/react-yandex-maps'
 
-import './index.css'
 import { Pin } from './Placemark'
 
 type MapWindowProps = {
