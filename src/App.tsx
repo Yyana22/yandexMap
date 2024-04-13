@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { WithYmaps } from './YsMap'
+import { YMaps } from '@pbe/react-yandex-maps'
 
 function App() {
+  const data = [
+    { pointName: 'One', pointX: 37.573, pointY: 55.751 },
+    { pointName: 'Two', pointX: 37.57, pointY: 55.76 },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div>
+        <YMaps query={{ apikey: '8bb5cdf6-83a2-449c-ab22-ab2b1e60ca13' }}>
+          <WithYmaps data={data} />
+        </YMaps>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
